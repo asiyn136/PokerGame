@@ -82,4 +82,140 @@ public class PokerTest {
 		result = poker.isFullHouse(input, 5);
 		assertEquals(false, result);
 	}
+	
+	// Test case 9: n = 5, cards = {"C5", "C6", "D6", "H6", "S6"};
+	@Test
+	public void test56666() {
+		boolean result;
+		String[] input = new String[] {"C5", "C6", "D6", "H6", "S6"};
+		result = poker.isFullHouse(input, 5);
+		assertEquals(false, result);
+	}
+	
+	// Test case 10: n = 6, cards = {"C5", "D5", "C6", "D6", "H6", "S6"};
+	@Test
+	public void test556666() {
+		boolean result;
+		String[] input = new String[] {"C5", "D5", "C6", "D6", "H6", "S6"};
+		result = poker.isFullHouse(input, 6);
+		assertEquals(false, result);
+	}
+	
+	// Test case threeOfaKind 1: n = 5, cards = {"C6", "D6", "H6", "S6", "D7"};
+	@Test
+	public void test_threeOf66667() {
+		boolean result;
+		String[] input = new String[] {"C6", "D6", "H6", "S6", "D7"};
+		result = poker.isThreeOfaKind(input, 5);
+		assertEquals(true, result);
+	}
+
+	// Test case threeOfaKind 2: n = 5, cards = {"C5", "D6", "H6", "S6", "C6"};
+	@Test
+	public void test_threeOf56666() {
+		boolean result;
+		String[] input = new String[] {"C5", "D6", "H6", "S6", "C6"};
+		result = poker.isThreeOfaKind(input, 5);
+		assertEquals(true, result);
+	}
+	
+	// Test case threeOfaKind 3: n = 5, cards = {"C5", "D6", "H6", "S6", "D7"};
+	@Test
+	public void test_threeOf56667() {
+		boolean result;
+		String[] input = new String[] {"C5", "D6", "H6", "S6", "D7"};
+		result = poker.isThreeOfaKind(input, 5);
+		assertEquals(true, result);
+	}
+	
+	// Test case threeOfaKind 4: n = 5, cards = {"C6", "D6", "H7", "S7", "D7"};
+	@Test
+	public void test_threeOf66777() {
+		boolean result;
+		String[] input = new String[] {"C6", "D6", "H7", "S7", "D7"};
+		result = poker.isThreeOfaKind(input, 5);
+		assertEquals(true, result);
+	}
+	
+	// Test case threeOfaKind 5: n = 5, cards = {"C6", "D6", "H6", "S7", "D7"};
+	@Test
+	public void test_threeOf66677() {
+		boolean result;
+		String[] input = new String[] {"C6", "D6", "H6", "S7", "D7"};
+		result = poker.isThreeOfaKind(input, 5);
+		assertEquals(true, result);
+	}
+	
+	// Test case threeOfaKind 6: n = 5, cards = {"C5", "D5", "H6", "S7", "D7"};
+	@Test
+	public void test_threeOf55677() {
+		boolean result;
+		String[] input = new String[] {"C5", "D5", "H6", "S7", "D7"};
+		result = poker.isThreeOfaKind(input, 5);
+		assertEquals(false, result);
+	}
+
+	
+	// Test case twoPairs 1: n = 5, cards = {"C6", "D6", "H7", "S7", "D8"};
+	@Test
+	public void test_twoPairs66778() {
+		boolean result;
+		String[] input = new String[] {"C6", "D6", "H7", "S7", "D8"};
+		result = poker.isTwoPairs(input, 5);
+		assertEquals(true, result);
+	}
+
+	// Test case twoPairs 2: n = 5, cards = {"C6", "D7", "H7", "S8", "D8"};
+	@Test
+	public void test_twoPairs67788() {
+		boolean result;
+		String[] input = new String[] {"C6", "D7", "H7", "S8", "D8"};
+		result = poker.isTwoPairs(input, 5);
+		assertEquals(true, result);
+	}
+	
+	// Test case twoPairs 3: n = 5, cards = {"C6", "D6", "H7", "S8", "D8"};
+	@Test
+	public void test_twoPairs66788() {
+		boolean result;
+		String[] input = new String[] {"C6", "D6", "H7", "S8", "D8"};
+		result = poker.isTwoPairs(input, 5);
+		assertEquals(true, result);
+	}
+	
+	// Test case twoPairs 4: n = 5, cards = {"C6", "D6", "H6", "S6", "D7"};
+	@Test
+	public void test_twoPairs66667() {
+		boolean result;
+		String[] input = new String[] {"C6", "D6", "H6", "S6", "D7"};
+		result = poker.isTwoPairs(input, 5);
+		assertEquals(true, result);
+	}
+	
+	// Test case twoPairs 5: n = 5, cards = {"C5", "C6", "D6", "H6", "S6"};
+	@Test
+	public void test_twoPairs56666() {
+		boolean result;
+		String[] input = new String[] {"C5", "C6", "D6", "H6", "S6"};
+		result = poker.isTwoPairs(input, 5);
+		assertEquals(true, result);
+	}
+	
+	// Test case twoPairs 6: n = 5, cards = {"C6", "D6", "H6", "S7", "S8"};
+	@Test
+	public void test_twoPairs66678() {
+		boolean result;
+		String[] input = new String[] {"C6", "D6", "H6", "S7", "S8"};
+		result = poker.isTwoPairs(input, 5);
+		assertEquals(false, result);
+	}
+	
+	// Test case twoPairs 7: n = 5, cards = {"C5", "D6", "H7", "S8", "S9"};
+	@Test
+	public void test_twoPairs56789() {
+		boolean result;
+		String[] input = new String[] {"C5", "D6", "H7", "S8", "S9"};
+		result = poker.isTwoPairs(input, 5);
+		assertEquals(false, result);
+	}
 }
